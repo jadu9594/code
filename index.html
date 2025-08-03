@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearCast Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="main-container">
+
+        <header class="app-header">
+            <h1>ClearCast</h1>
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Search for a city...">
+                <button type="submit">Go</button>
+            </form>
+        </header>
+
+
+        <div id="day-selector" class="hidden">
+
+        </div>
+
+        <div id="error-message" class="hidden">
+            <p>Could not find city. Please try again.</p>
+        </div>
+
+        <div id="weather-container" class="hidden">
+        </div>
+
+        <div id="forecast-container" class="hidden">
+            <h2>24-Hour Forecast</h2>
+            <div id="chart-controls">
+                <button class="chart-btn active" data-type="temperature">Temperature</button>
+                <button class="chart-btn" data-type="humidity">Humidity</button>
+                <button class="chart-btn" data-type="precipitation">Precipitation</button>
+            </div>
+            <div id="forecast-chart-container">
+                <canvas id="weather-chart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
