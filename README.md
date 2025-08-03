@@ -1,2 +1,0 @@
-# code
-weather code
